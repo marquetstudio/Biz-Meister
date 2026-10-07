@@ -51,11 +51,18 @@
         .delay-100 { animation-delay: 100ms; }
         .delay-300 { animation-delay: 300ms; }
         .delay-500 { animation-delay: 500ms; }
+
+        body {
+            /* Set the background image to the new file name */
+            background-image: url("image.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
     </style>
 </head>
-<!-- Main container with background image, ensuring it covers the screen and is centered -->
-<body class="relative min-h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center font-sans antialiased selection:bg-luxe-gold selection:text-black" 
-      style="background-image: url('image.png');">
+<!-- Main container styling remains, but inline style is removed as it's now in the <style> block -->
+<body class="relative min-h-screen flex flex-col items-center justify-center font-sans antialiased selection:bg-luxe-gold selection:text-black">
 
     <!-- Heavy dark overlay to ensure maximum text legibility and a moody atmosphere -->
     <div class="absolute inset-0 bg-slate-950/85 z-0"></div>
