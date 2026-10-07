@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Biz Meister | Coming Soon</title>
+    <!-- Load Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Google Fonts: Playfair Display for headings, Plus Jakarta Sans for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        'luxe-gold': '#D4AF37',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            /* Ensure the body takes full height and prevents unwanted scrolling if content is small */
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        /* Subtle fade-in animation for a premium feel */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1.2s ease-out forwards;
+            opacity: 0; /* Initial state before animation */
+        }
+        
+        /* Staggered animation delays */
+        .delay-100 { animation-delay: 100ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-500 { animation-delay: 500ms; }
+    </style>
+</head>
+<!-- Main container with background image, ensuring it covers the screen and is centered -->
+<body class="relative min-h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center font-sans antialiased selection:bg-luxe-gold selection:text-black" 
+      style="background-image: url('Untitled - October 07, 2026 at 13.42.01.jpg');">
+
+    <!-- Heavy dark overlay to ensure maximum text legibility and a moody atmosphere -->
+    <div class="absolute inset-0 bg-slate-950/85 z-0"></div>
+
+    <!-- Content Container: Centered, relatively positioned above the overlay, strictly minimalist -->
+    <main class="relative z-10 text-center px-6 flex flex-col items-center justify-center w-full max-w-4xl mx-auto">
+        
+        <!-- Brand Name: Elegant serif in luxe gold -->
+        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl text-luxe-gold font-medium tracking-tight mb-6 animate-fade-in delay-100 drop-shadow-lg">
+            The Biz Meister
+        </h1>
+        
+        <!-- Tagline: Clean sans-serif in crisp white -->
+        <p class="font-sans text-xl md:text-2xl text-white font-light tracking-wide mb-12 animate-fade-in delay-300 drop-shadow-md max-w-2xl">
+            Turning Potential into Performance.
+        </p>
+        
+        <!-- Status: Widely tracked uppercase text -->
+        <div class="animate-fade-in delay-500">
+            <span class="inline-block uppercase tracking-[0.3em] text-sm md:text-base text-gray-400 font-medium border-b border-luxe-gold/30 pb-1">
+                Coming Soon
+            </span>
+        </div>
+
+    </main>
+
+</body>
+</html>
